@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assetxpresshub | Trade Global Markets</title>
+  <meta name="description" content="Assetxpresshub trading platform">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="/" class="brand">
+      <span class="brand-mark">A</span>
+      <span>Assetxpress<span class="cyan">hub</span></span>
+    </a>
+
+    <nav>
+      <a href="#markets">Markets</a>
+      <a href="#features">Features</a>
+      <button class="btn btn-outline" onclick="openModal('login')">Login</button>
+      <button class="btn btn-primary" onclick="openModal('register')">Create Account</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">GLOBAL MARKETS • ONE PLATFORM</div>
+
+        <h1>
+          Trade Global Markets<br>
+          <span>With Confidence</span>
+        </h1>
+
+        <p>
+          Explore markets, manage your account and monitor your portfolio
+          from one modern trading platform.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-large" onclick="openModal('register')">
+            Create Account
+          </button>
+
+          <button class="btn btn-outline btn-large" onclick="openModal('login')">
+            Login
+          </button>
+        </div>
+
+        <div class="trust-row">
+          <span>✓ Secure account access</span>
+          <span>✓ Responsive interface</span>
+          <span>✓ Global markets</span>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-top">
+          <span>MARKET OVERVIEW</span>
+          <span class="live">● DEMO</span>
+        </div>
+
+        <div class="market-row">
+          <div>
+            <strong>BTC/USD</strong>
+            <small>Bitcoin</small>
+          </div>
+          <strong>$67,420.18</strong>
+          <span class="up">+2.41%</span>
+        </div>
+
+        <div class="market-row">
+          <div>
+            <strong>ETH/USD</strong>
+            <small>Ethereum</small>
+          </div>
+          <strong>$3,421.66</strong>
+          <span class="up">+1.84%</span>
+        </div>
+
+        <div class="market-row">
+          <div>
+            <strong>EUR/USD</strong>
+            <small>Euro / Dollar</small>
+          </div>
+          <strong>1.0842</strong>
+          <span class="up">+0.32%</span>
+        </div>
+
+        <div class="market-row">
+          <div>
+            <strong>GOLD</strong>
+            <small>Gold Spot</small>
+          </div>
+          <strong>$2,386.40</strong>
+          <span class="down">-0.18%</span>
+        </div>
+
+        <p class="muted">
+          Market figures shown are demonstration values and are not live market data.
+        </p>
+      </div>
+    </section>
+
+    <section id="markets" class="section">
+      <div class="section-title">
+        <span class="eyebrow">MARKETS</span>
+        <h2>Stay connected to the markets</h2>
+        <p>
+          Monitor market information through a clean, responsive dashboard.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">₿</div>
+          <h3>Crypto</h3>
+          <p>Monitor major digital assets and market movements.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">$</div>
+          <h3>Forex</h3>
+          <p>Follow major currency pairs and global markets.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">◈</div>
+          <h3>Global Assets</h3>
+          <p>Organize your market information in one place.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section dashboard-preview">
+      <div>
+        <span class="eyebrow">YOUR DASHBOARD</span>
+
+        <h2>Everything in one place.</h2>
+
+        <p>
+          Create an account to access your personal dashboard,
+          account information and transaction history.
+        </p>
+
+        <button class="btn btn-primary" onclick="openModal('register')">
+          Get Started
+        </button>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="dashboard-header">
+          <span>Portfolio</span>
+          <span class="muted">Assetxpresshub</span>
+        </div>
+
+        <div class="balance">$0.00</div>
+
+        <div class="muted">Account balance</div>
+
+        <div class="chart"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <span class="brand-mark">A</span>
+      <span>Assetxpress<span class="cyan">hub</span></span>
+    </div>
+
+    <p>
+      © 2026 Assetxpresshub. Market information shown for demonstration.
+    </p>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-box">
+
+      <button class="close" onclick="closeModal()">×</button>
+
+      <div id="loginForm">
+        <span class="eyebrow">WELCOME BACK</span>
+
+        <h2>Login</h2>
+
+        <form onsubmit="loginUser(event)">
+          <input
+            id="loginEmail"
+            type="email"
+            placeholder="Email address"
+            required
+          >
+
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+            required
+          >
+
+          <button class="btn btn-primary full" type="submit">
+            Login
+          </button>
+        </form>
+
+        <p id="loginMessage" class="message"></p>
+
+        <p class="switch">
+          Don't have an account?
+          <button type="button" onclick="showRegister()">Create one</button>
+        </p>
+      </div>
+
+      <div id="registerForm" class="hidden">
+        <span class="eyebrow">GET STARTED</span>
+
+        <h2>Create Account</h2>
+
+        <form onsubmit="registerUser(event)">
+          <input
+            id="registerName"
+            type="text"
+            placeholder="Full name"
+            required
+          >
+
+          <input
+            id="registerEmail"
+            type="email"
+            placeholder="Email address"
+            required
+          >
+
+          <input
+            id="registerPassword"
+            type="password"
+            placeholder="Password"
+            minlength="8"
+            required
+          >
+
+          <button class="btn btn-primary full" type="submit">
+            Create Account
+          </button>
+        </form>
+
+        <p id="registerMessage" class="message"></p>
+
+        <p class="switch">
+          Already have an account?
+          <button type="button" onclick="showLogin()">Login</button>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
