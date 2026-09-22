@@ -1,0 +1,16 @@
+{
+  "name": "assetxpresshub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Assetxpresshub web platform",
+  "scripts": {
+    "build": "echo Build complete"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "postgres": "^3.4.7"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
